@@ -8,17 +8,17 @@ script:
   - docker run -e CI=true caiquedutra/react-test npm test 
 
 after_success:
-  - docker build caiquedutra/multiclient ./client
-  - docker build caiquedutra/multi-nginx ./nginx
-  - docker build caiquedutra/multi-server ./server
-  - docker build caiquedutra/multi-worker ./worker
+  - docker build caique2203/multiclient ./client
+  - docker build caique2203/multi-nginx ./nginx
+  - docker build caique2203/multi-server ./server
+  - docker build caique2203/multi-worker ./worker
 
   - echo "DOCKER_PASSWORD" | docker login -u "DOCKER_ID" --password-stdin
 
-  - docker push caiquedutra/multi-client
-  - docker push caiquedutra/multi-nginx
-  - docker push caiquedutra/multi-server
-  - docker push caiquedutra/multi-worker
+  - docker push caique2203/multi-client
+  - docker push caique2203/multi-nginx
+  - docker push caique2203/multi-server
+  - docker push caique2203/multi-worker
 
 
 
