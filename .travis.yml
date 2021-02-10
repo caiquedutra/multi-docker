@@ -16,9 +16,5 @@ after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
   - docker push caique2203/multi-client
-  - docker push caique2203/multi-nginx
-  - docker push caique2203/multi-server
-  - docker push caique2203/multi-worker
-
 
 
