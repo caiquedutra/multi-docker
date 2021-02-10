@@ -13,7 +13,7 @@ after_success:
   - docker build caique2203/multi-server ./server
   - docker build caique2203/multi-worker ./worker
 
-  - echo "DOCKER_PASSWORD" | docker login -u "DOCKER_ID" --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
   - docker push caique2203/multi-client
   - docker push caique2203/multi-nginx
