@@ -2,10 +2,10 @@ sudo: required
 services:
   - docker
 before_install:
-  - docker build -t caiquedutra/react-test -f ./client/Dockerfile.dev ./client
+  - docker build -t caique2203/react-test -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run -e CI=true caiquedutra/react-test npm test 
+  - docker run -e CI=true caique2203/react-test npm test 
 
 after_success:
   - docker build caique2203/multiclient ./client
